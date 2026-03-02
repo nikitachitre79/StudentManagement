@@ -1,4 +1,7 @@
-FROM eclipse-temurin:17-jdk
+FROM eclipse-temurin:17-jre
 WORKDIR /app
-COPY studentmanagement/target/*.jar app.jar
-ENTRYPOINT ["java", "-jar", "FullStack.jar"]
+
+# copy the exact jar name from the local target folder
+COPY target/FullStack.jar app.jar
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
