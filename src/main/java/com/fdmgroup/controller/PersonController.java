@@ -1,6 +1,7 @@
 package com.fdmgroup.controller;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +12,7 @@ import com.fdmgroup.model.Student;
 import com.fdmgroup.model.Teacher;
 import com.fdmgroup.repository.Teacherrepository;
 import com.fdmgroup.service.IStudentService;
-
+@CrossOrigin(origins = "https://react-app1-79505229087.northamerica-northeast2.run.app")
 @RestController
 @RequestMapping
 public class PersonController {

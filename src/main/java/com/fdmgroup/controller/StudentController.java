@@ -1,5 +1,6 @@
 package com.fdmgroup.controller;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fdmgroup.model.Student;
 import com.fdmgroup.service.IStudentService;
 import com.fdmgroup.dto.PersonDto;
-
+@CrossOrigin(origins = "https://react-app1-79505229087.northamerica-northeast2.run.app")
 @RestController
 @RequestMapping("/students")
 public class StudentController {
