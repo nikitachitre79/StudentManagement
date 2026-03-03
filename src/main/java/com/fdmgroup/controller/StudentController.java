@@ -1,5 +1,7 @@
 package com.fdmgroup.controller;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -36,5 +38,9 @@ public class StudentController {
 	public Student saveStudentFromDto(@RequestBody PersonDto dto) {
 		Student student = new Student(dto.getName(), dto.getGrade());
 		return studentService.save(student);
+	}
+	@GetMapping()
+	public List<Student> getAllStudents() {
+		return studentService.findAll();
 	}
 }
